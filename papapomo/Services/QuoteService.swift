@@ -1,0 +1,72 @@
+import Foundation
+
+enum QuoteService {
+    static let quotes: [String] = [
+        "Success is the sum of small efforts repeated daily.",
+        "Discipline is choosing what you want most over what you want now.",
+        "Focus is a superpower in a distracted world.",
+        "Tiny progress still moves you forward.",
+        "Done today is better than perfect someday.",
+        "You do not need motivation to begin, only a decision.",
+        "The work compounds, even when results feel invisible.",
+        "One focused block can change your entire day.",
+        "Clarity comes from action, not overthinking.",
+        "Protect your attention like it is your future.",
+        "Consistency beats intensity over the long run.",
+        "Every session is a vote for the person you are becoming.",
+        "Show up first, optimize later.",
+        "Momentum loves repetition.",
+        "Your calendar reveals your priorities.",
+        "Deep work creates rare outcomes.",
+        "Small steps, serious direction.",
+        "The task in front of you is enough for now.",
+        "Excellence is daily execution, not occasional brilliance.",
+        "Energy follows committed action.",
+        "What gets scheduled gets done.",
+        "Start before you are ready.",
+        "Focus is self-respect in practice.",
+        "Mastery is built in ordinary days.",
+        "Guard your mornings, win your day.",
+        "Your habits are your hidden architecture.",
+        "Progress loves patience and persistence.",
+        "Less noise, more output.",
+        "Finish what you start, then start again.",
+        "Each distraction has a cost.",
+        "Simple systems beat heroic effort.",
+        "Attention is your most valuable asset.",
+        "Hard choices make easy days later.",
+        "Keep promises to yourself.",
+        "One more focused minute matters.",
+        "Do the priority before the pressure.",
+        "Repetition turns effort into identity.",
+        "You can be tired and still be disciplined.",
+        "If it matters, give it a block.",
+        "Control the inputs, trust the outputs.",
+        "Action cures anxiety better than planning.",
+        "Create before you consume.",
+        "Your future is built in your quiet hours.",
+        "Effort is never wasted when it builds skill.",
+        "Show up, even when it is not convenient.",
+        "The ordinary day is where greatness is earned.",
+        "Work in silence, let results make noise.",
+        "Commitment is doing it after the feeling fades.",
+        "Protect your focus from easy dopamine.",
+        "What you repeat, you become.",
+        "Good systems make hard goals achievable.",
+        "Choose progress over comfort.",
+        "You only need the next right action.",
+        "Win this hour.",
+        "Your standards set your ceiling.",
+        "A focused mind is a calm mind.",
+        "Deep attention is a competitive edge.",
+        "Build the day you want to remember.",
+        "Results are lagging indicators of disciplined days.",
+        "Start now. Adjust later."
+    ]
+
+    static func quote(at index: Int) -> String {
+        guard !quotes.isEmpty else { return "" }
+        let safeIndex = ((index % quotes.count) + quotes.count) % quotes.count
+        return quotes[safeIndex]
+    }
+}
